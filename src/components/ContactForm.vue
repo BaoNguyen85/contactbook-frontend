@@ -56,7 +56,7 @@
             </label>
         </div>
 
-        <div class="form-group">
+        <div v-if="contact.id" class="form-group">
             <button class="btn btn-primary">Lưu</button>
             <button
                 v-if="contactLocal.id"
@@ -66,6 +66,9 @@
             >
                 Xóa
             </button>   
+        </div  >
+        <div v-else>
+            <button class="btn btn-success">Thêm</button>
         </div>
     </Form>
 </template>
